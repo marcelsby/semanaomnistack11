@@ -15,10 +15,10 @@ export default StyleSheet.create({
     },
 
     incident: {
-        padding: 24 ,
+        padding: 24,
         borderRadius: 8,
         backgroundColor: '#fff',
-        marginBottom: 16, 
+        marginBottom: 16,
         marginTop: 24,
     },
 
@@ -53,7 +53,7 @@ export default StyleSheet.create({
     },
 
     heroContactText: {
-        marginTop: 16, 
+        marginTop: 16,
         marginBottom: 16,
         color: '#737380',
     },

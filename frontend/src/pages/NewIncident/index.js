@@ -20,9 +20,9 @@ export default function NewIncident() {
         const data = {
             title,
             description,
-            value 
+            value
         };
-        
+
         try {
             await api.post('incidents', data, {
                 headers: {
@@ -35,34 +35,34 @@ export default function NewIncident() {
             alert('Não foi possível completar o cadastro do seu caso, tente novamente.')
         }
 
-        
+
     }
 
     return (
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Be The Hero"/>
+                    <img src={logoImg} alt="Be The Hero" />
                     <h1>Cadastrar novo caso</h1>
                     <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
                     <Link className="back-link" to="/profile">
-                        <FiArrowLeft size={16} color="#E02041"/>
+                        <FiArrowLeft size={16} color="#E02041" />
                         Voltar para a home
                     </Link>
-                </section>    
+                </section>
 
                 <form>
-                    <input 
+                    <input
                         placeholder="Título do caso"
                         value={title}
                         onChange={event => setTitle(event.target.value)}
                     />
-                    <textarea 
+                    <textarea
                         placeholder="Descrição"
                         value={description}
                         onChange={event => setDescription(event.target.value)}
                     />
-                    <input 
+                    <input
                         placeholder="Valor em reais"
                         value={value}
                         onChange={event => setValue(event.target.value)}
@@ -71,7 +71,7 @@ export default function NewIncident() {
                     <button className="button" type="submit" onClick={handleNewIncident}>Cadastrar</button>
                     <Link className="button" to="/profile">Cancelar</Link>
                 </form>
-            </div>  
+            </div>
         </div>
     );
 }

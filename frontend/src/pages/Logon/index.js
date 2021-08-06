@@ -17,7 +17,7 @@ export default function Logon() {
             const res = await api.post('sessions', { id });
 
             localStorage.setItem('ongId', id);
-            localStorage.setItem('ongName', res.data.name) ;
+            localStorage.setItem('ongName', res.data.name);
 
             history.push('/profile')
         } catch (err) {
@@ -30,27 +30,27 @@ export default function Logon() {
 
             <section className="form">
 
-                <img src={logoImg} alt="Be The Hero"/>
+                <img src={logoImg} alt="Be The Hero" />
 
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
 
-                    <input 
+                    <input
                         placeholder="Sua ID"
                         value={id}
-                        onChange ={event => setId(event.target.value)}    
+                        onChange={event => setId(event.target.value)}
                     />
                     <button className="button" type="submit">Entrar</button>
 
                     <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#E02041"/>
+                        <FiLogIn size={16} color="#E02041" />
                         Não tenho Cadastro
                     </Link>
                 </form>
 
             </section>
 
-            <img src={heroesImg} alt="Heroes"/>
+            <img src={heroesImg} alt="Heroes" />
 
         </div>
     );
